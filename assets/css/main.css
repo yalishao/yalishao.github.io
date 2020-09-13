@@ -85,16 +85,16 @@ input, select, textarea {
 		background: #D4D9DD url("images/bg03.jpg");
 		color: #474f51;
 		font-size: 13.5pt;
-		font-family: 'Arial, Helvetica, sans-serif';
-		line-height: 1.85em;
+		font-family: 'Verdana';
+		line-height: 1.3em;
 		font-weight: 300;
 	}
 
 	input, textarea, select {
 		color: #474f51;
 		font-size: 13.5pt;
-		font-family: 'Arial, Helvetica, sans-serif';
-		line-height: 1.85em;
+		font-family: 'Verdana';
+		line-height: 1.3em;
 		font-weight: 300;
 	}
 
@@ -103,12 +103,13 @@ input, select, textarea {
 	}
 
 	a {
-		text-decoration: underline;
+        text-decoration: none;
 	}
 
 		a:hover {
-			text-decoration: none;
+			text-decoration: underline;
 		}
+
 
 	section > :last-child,
 	section:last-child,
@@ -155,6 +156,8 @@ input, select, textarea {
 			}
 
 		}
+
+
 
 /* Row */
 
@@ -220,6 +223,9 @@ input, select, textarea {
 		.row > .col-3 {
 			width: 25%;
 		}
+        .row > .col-33 {
+            width: 23%;
+        }
 
 		.row > .off-3 {
 			margin-left: 25%;
@@ -1457,9 +1463,9 @@ input, select, textarea {
 
 	.bordered-feature-image {
 		display: block;
-		background: #fff url("images/bg04.png");
+		background: #fff ;
 		padding: 10px;
-		box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.15);
+		box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
 		margin: 0 0 1.5em 0;
 		outline: 0;
 	}
@@ -1468,6 +1474,20 @@ input, select, textarea {
 			display: block;
 			width: 100%;
 		}
+
+        .bordered-small-feature-image {
+            display: block;
+            background: #fff ;
+            padding: 10px;
+            box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
+            margin: 0 0 1.5em 0;
+            outline: 0;
+        }
+
+        .bordered-small-feature-image img {
+            display: block;
+            width: 65%;
+        }
 
 	.button-large {
 		background-image: -moz-linear-gradient(top, #ed391b, #ce1a00);
@@ -1545,7 +1565,7 @@ input, select, textarea {
 				color: #c6c8c8;
 				text-decoration: none;
 				font-size: 1.4em;
-				margin-left: 60px;
+				margin-left: 16px;
 				outline: 0;
 			}
 
@@ -1605,13 +1625,13 @@ input, select, textarea {
 /* Content */
 
 	#content {
-		background: #f7f7f7 url("images/bg04.png");
+		background: white;
 		border-top: solid 1px #fff;
 		padding: 45px 0 45px 0;
 	}
 
 		#content section {
-			background: #fff;
+			background: white ;
 			padding: 40px 30px 45px 30px;
 			box-shadow: 2px 2px 2px 1px rgba(128, 128, 128, 0.1);
 			margin: 0 0 25px 0;
@@ -1620,17 +1640,37 @@ input, select, textarea {
 		#content h2 {
 			font-size: 1.8em;
 			color: #373f42;
-			margin: 0 0 0.25em 0;
+			margin: 0 0 2em 0;
 		}
 
 		#content h3 {
-			color: #96a9b5;
-			font-size: 1.25em;
+			color: #373f42;
+			font-size: 1.8em;
 		}
+        #content h4 {
+            text-shadow: lightgrey 0.1em 0.1em 0.1em;
+        }
+
 
 		#content a {
-			color: #ED391B;
+			color: cornflowerblue;
 		}
+
+        #content i {
+            font-style: italic;
+        }
+
+        #content sup {
+            position: relative;
+            top: -0.5em;
+            font-size: 70%;
+        }
+
+        #content sub {
+            position: relative;
+            top: -0.0em;
+            font-size: 70%;
+        }
 
 		#content header {
 			margin: 0 0 2em 0;
@@ -1688,7 +1728,7 @@ input, select, textarea {
 		border-top: solid 1px #b5bec3;
 		box-shadow: inset 0px 1px 0px 0px #e0e4e7;
 		text-align: center;
-		padding: 45px 0 80px 0;
+		padding: 10px 0 10px 0;
 		color: #8d9ca3;
 		text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.5);
 	}
@@ -1748,7 +1788,7 @@ input, select, textarea {
 		/* Header */
 
 			#header h1 {
-				font-size: 2.25em;
+				font-size: 2.7em;
 			}
 
 			#header nav a {
