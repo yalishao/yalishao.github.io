@@ -45,10 +45,17 @@ blockquote, q {
 		content: none;
 	}
 
-table {
+table{
 	border-collapse: collapse;
 	border-spacing: 0.0;
+    border:solid silver;
+    border-width:1px 1px 1px 1px;
 }
+
+
+th,td{border:solid silver; border-width:0px 1px 1px 0px; padding:10px 10px;}
+
+
 
 body {
 	-webkit-text-size-adjust: none;
