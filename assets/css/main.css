@@ -90,16 +90,16 @@ input, select, textarea {
 
 	body {
 		background: #D4D9DD url("images/bg03.jpg");
-		color: #474f51;
-		font-size: 13.5pt;
+		color: black;
+		font-size: 15pt;
 		font-family: 'Verdana';
 		line-height: 1.3em;
 		font-weight: 300;
 	}
 
 	input, textarea, select {
-		color: #474f51;
-		font-size: 13.5pt;
+		color: black;
+		font-size: 15pt;
 		font-family: 'Verdana';
 		line-height: 1.3em;
 		font-weight: 300;
@@ -1493,7 +1493,9 @@ input, select, textarea {
 
         .bordered-small-feature-image img {
             display: block;
-            width: 65%;
+            width: 60%;
+            position:relative;
+            left:20%;
         }
 
 	.button-large {
@@ -1617,16 +1619,16 @@ input, select, textarea {
 
 		#features h2 {
 			font-size: 1.25em;
-			color: #fff;
+			color: black;
 			margin: 0 0 0.25em 0;
 		}
 
 		#features a {
-			color: #e0e8eb;
+			color: black;
 		}
 
 		#features strong {
-			color: #fff;
+			color: black;
 		}
 
 /* Content */
@@ -1646,12 +1648,12 @@ input, select, textarea {
 
 		#content h2 {
 			font-size: 1.8em;
-			color: #373f42;
+			color: black;
 			margin: 0 0 2em 0;
 		}
 
 		#content h3 {
-			color: #373f42;
+			color: black;
 			font-size: 1.8em;
 		}
         #content h4 {
@@ -1660,7 +1662,7 @@ input, select, textarea {
 
 
 		#content a {
-			color: cornflowerblue;
+			color: #004B97;
 		}
 
         #content i {
@@ -1694,6 +1696,14 @@ input, select, textarea {
 		#content .check-list li {
 			border-bottom: solid 1px #e2e6e8;
 		}
+        #content .hangingindent {
+            padding-left: 22px ;
+            text-indent: -22px ;
+        }
+        #content .hangingindent2 {
+            padding-left: 26px ;
+            text-indent: -26px ;
+        }
 
 /* Footer */
 
