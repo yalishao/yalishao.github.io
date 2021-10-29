@@ -1670,6 +1670,10 @@ input, select, textarea {
             font-style: italic;
         }
 
+        #content b {
+            font-weight: bold;
+        }
+
         #content sup {
             position: relative;
             top: -0.5em;
