@@ -1647,7 +1647,7 @@ input, select, textarea {
 		}
 
 		#content h2 {
-			font-size: 1.8em;
+			font-size: 30pt;
 			color: black;
 			margin: 0 0 2em 0;
 		}
@@ -1657,10 +1657,34 @@ input, select, textarea {
 			font-size: 1.8em;
 		}
         #content h4 {
+            font-size: 18pt;
             text-shadow: lightgrey 0.1em 0.1em 0.1em;
         }
 
+        #content h5 {
+            color: black;
+            font-size: 20pt;
+        }
 
+        #content h6 {
+            color: black;
+            font-size: 15pt;
+        }
+
+        #content h7 {
+            color: black;
+            font-size: 28pt;
+        }
+
+        #content h8 {
+            color: black;
+            font-size: 22.5pt;
+        }
+
+        #content h9 {
+            color: black;
+            font-size: 21pt;
+        }
 
 		#content a {
 			color: #004B97;
