@@ -46,7 +46,6 @@ blockquote, q {
 	}
 
 table{
-    display: block;
 	border-collapse: collapse;
 	border-spacing: 0.0;
     border:solid silver;
