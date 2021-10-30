@@ -49,7 +49,7 @@
                                                                     
                                         <ul class="link-list">
                                             <div style="position: relative;">
-                                                　　<img style="position:absolute; z-index:2; left:215px; top:10px" src="images/8.png" />
+                                                　　<img style="position:absolute; z-index:2; left:215px; top:10px" src="images/research_arrow.png" />
                                                 　　<div style="position:absolute; left:0px;  top:0px"><a href="research_firq.html"><h4>FIR Luminous<br> Quasars at <i>z</i> ~ 6</h4></a></div>
                                             </div>
                                             <br>
@@ -107,19 +107,28 @@
                                         <!-- Gas Kinematics of FIR Luminous z ~ 6 Quasars Revealed by ALMA High Resolution Observations -->
                                         <p class="hangingindent2">
                                         &#9672; Gas Kinematics of FIR Luminous <i>z</i> ~ 6 Quasars Revealed by ALMA High Resolution Observations (<a href="https://ui.adsabs.harvard.edu/abs/2017ApJ...845..138S/abstract" target="_blank">Shao et al. 2017</a>; Shao et al. 2021 in prep.)
-                                        
                                         </p>
                                         
                                         
+                                        <!--    -->
+                                        <script>
+                                        var kin=new Array("images/research_J1319_kin.png","images/research_J2310_kin.png");
+                                        var kini=0;
+                                        function kinfun()
+                                        {
+                                           kini++;
+                                           if(kini>=kin.length)
+                                             kini=0;
+                                            document.getElementById("kin").src=kin[kini];
+                                        }
+                                        setInterval(kinfun,2000);
+                                        </script>
                                         <p class="hangingindent2">
-                                        <a class="bordered-feature-image"><img src="images/j1319cii.jpg"/></a>
-                                        Notes - J1319+0950 ALMA [C II] work.
+                                        <a class="bordered-feature-image"><img id="kin"></img></a>
+                                        Notes - Gas kinematic modelling.
                                         </p>
-                                        
-                                        <p class="hangingindent2">
-                                        <a class="bordered-feature-image"><img src="images/J2310cii.png"/></a>
-                                        Notes - J2310+1855 ALMA [C II] work.
-                                        </p>
+                                        <!--    -->
+
                                         
                                     
                                         
@@ -128,28 +137,56 @@
                                         &#9672; The Star Formation in the Host Galaxy of the FIR Luminous Quasar J2310+1855 at <i>z</i> = 6.00 with <i>Herschel</i> and ALMA FIR photometries (<a href="https://ui.adsabs.harvard.edu/abs/2019ApJ...876...99S/abstract" target="_blank">Shao et al. 2019</a>)
                                         </p>
                                         
+                                        
+                                        <!--    -->
+                                        <script>
+                                        var dust=new Array("images/research_J2310_dust_sed1.png","images/research_J2310_dust_sed2.png");
+                                        var dusti=0;
+                                        function dustfun()
+                                        {
+                                           dusti++;
+                                           if(dusti>=dust.length)
+                                             dusti=0;
+                                            document.getElementById("dust").src=dust[dusti];
+                                        }
+                                        setInterval(dustfun,2000);
+                                        </script>
                                         <p class="hangingindent2">
-                                        <a class="bordered-feature-image"><img src="images/j2310sed.png" alt="" /></a>
-                                        Notes - SED fitting toward quasar J2310+1855 at <i>z</i> = 6.00.
-                                        <p>
+                                        <a class="bordered-feature-image"><img id="dust"></img></a>
+                                        Notes - SED decomposition toward quasar J2310+1855 at <i>z</i> = 6.00.
+                                        </p>
+                                        <!--    -->
+                                        
+                                        
+                                    
                                         
                                         <!-- The Molecular CO in Three FIR Luminous Quasars at z ~ 6 Revealed by the VLA -->
                                         <p class="hangingindent2">
-                                        &#9672; The Molecular CO (low-<i>J</i>) in FIR Luminous Quasars at <i>z</i> ~ 6 Revealed by the VLA (<a href="https://ui.adsabs.harvard.edu/abs/2019ApJ...876...99S/abstract" target="_blank">Shao et al. 2019</a>)
+                                        &#9672; The Molecular CO in FIR Luminous Quasars at <i>z</i> ~ 6 Revealed by the VLA (<a href="https://ui.adsabs.harvard.edu/abs/2019ApJ...876...99S/abstract" target="_blank">Shao et al. 2019</a>)
 										</p>
                                         
+                                        <!--    -->
+                                        <script type="text/javascript">
+                                        var co=new Array("images/research_J0129_co.png","images/research_J2054_co.png","images/research_J2310_co.png","images/research_ratio.png");
+                                        var coi=0;
+                                        function cofun()
+                                        {
+                                           coi++;
+                                           if(coi>=co.length)
+                                             coi=0;
+                                            document.getElementById("co").src=co[coi];
+                                        }
+                                        setInterval(cofun,2000);
+                                        </script>
                                         <p class="hangingindent2">
-                                        <a class="bordered-feature-image"><img src="images/co21.png" alt="" /></a>
-                                        Notes - CO (2−1) line spectra of the three <i>z</i> ~ 6 quasars,  overplotted with CO (6−5) and [C II] lines.
+                                        <a class="bordered-feature-image"><img id="co"></img></a>
+                                        Notes - CO (2-1) line of three FIR luminouse quasars at <i>z</i> ~ 6.
                                         </p>
+                                        <!--    -->
                                         
                                         
-                                        <p class="hangingindent2">
-                                        <a class="bordered-small-feature-image"><img src="images/ratiomap.jpg"/></a>
-                                        Notes - ISM characteristics.
-                                        </p>
                                         
-                                        <!-- The Molecular CO in Three FIR Luminous Quasars at z ~ 6 Revealed by the VLA -->
+                                        <!-- Deep <i>HST</i> Near-infrared Imaging of the Luminous Quasar - ULAS J1319+0950 at <i>z</i> = 6.13 -->
                                         <p class="hangingindent2">
                                         &#9672; Deep <i>HST</i> Near-infrared Imaging of the Luminous Quasar - ULAS J1319+0950 at <i>z</i> = 6.13 (Shao et al. 2021 in prep.)
                                         </p>
