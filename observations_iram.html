@@ -57,60 +57,186 @@
                                         <p>
                                             <h4 style="margin-left:30px;">Useful Links</h4>
                                             <br>
-                                            <h6 style="margin-left:30px;">&#9744; NIKA2 homepage: <a href="https://publicwiki.iram.es/Continuum/NIKA2/Main" target="_blank">https://publicwiki.iram.es/Continuum/NIKA2/Main</a></h6>
-                                            <h6 style="margin-left:30px;">&#9744; Observing with NIKA2: <a href="https://publicwiki.iram.es/Continuum/ObservingSession" target="_blank">https://publicwiki.iram.es/Continuum/ObservingSession</a></h6>
-                                            <h6 style="margin-left:30px;">&#9744; NIKA-2 data reduction: <a href="https://publicwiki.iram.es/PIIC" target="_blank">https://publicwiki.iram.es/PIIC</a></h6>
-                                            <h6 style="margin-left:30px;">&#9744; Weather condition monitor and prediction: <a href="https://weather.iram.es/" target="_blank">https://weather.iram.es/</a></h6>
-                                            <h6 style="margin-left:30px;">&#9744; IRAM 30m pools webpage: <a href="https://pools.iram.es/" target="_blank">https://pools.iram.es/</a></h6>
-                                            <h6 style="margin-left:30px;">&#9744; Telescope Access for Public Archive System: <a href="https://tapas.iram.es/tapas" target="_blank">https://tapas.iram.es/tapas</a></h6>
-                                            <h6 style="margin-left:30px;">&#9744; Remote observing guide: <a href="http://mainwiki.iram.es/RemoteObservingGuide" target="_blank">http://mainwiki.iram.es/RemoteObservingGuide</a></h6>
-                                            <h6 style="margin-left:30px;">&#9744; Pool observations: <a href="https://publicwiki.iram.es/Continuum/PoolPreparation" target="_blank">https://publicwiki.iram.es/Continuum/PoolPreparation</a></h6>
+                                            <h6 style="margin-left:30px;">&#9744; NIKA2 homepage: <a href="https://publicwiki.iram.es/Continuum/NIKA2/Main" target="_blank">CLICK</a></h6>
+                                            <h6 style="margin-left:30px;">&#9744; Observing with NIKA2: <a href="https://publicwiki.iram.es/Continuum/ObservingSession" target="_blank">CLICK</a></h6>
+                                            <h6 style="margin-left:30px;">&#9744; NIKA-2 data reduction: <a href="https://publicwiki.iram.es/PIIC" target="_blank">CLICK</a></h6>
+                                            <h6 style="margin-left:30px;">&#9744; Weather condition monitor and prediction: <a href="https://weather.iram.es/" target="_blank">CLICK1</a> <a href="https://mrt-lx3.iram.es/tau/taumeter.html" target="_blank">CLICK2</a></h6>
+                                            <h6 style="margin-left:30px;">&#9744; IRAM 30m pools webpage: <a href="https://pools.iram.es/" target="_blank">CLICK</a></h6>
+                                            <h6 style="margin-left:30px;">&#9744; Telescope Access for Public Archive System: <a href="https://tapas.iram.es/tapas" target="_blank">CLICK</a></h6>
+                                            <h6 style="margin-left:30px;">&#9744; Remote observing guide: <a href="http://mainwiki.iram.es/RemoteObservingGuide" target="_blank">CLICK</a></h6>
+                                            <h6 style="margin-left:30px;">&#9744; Pool observations: <a href="https://publicwiki.iram.es/Continuum/PoolPreparation" target="_blank">CLICK</a></h6>
                                         </p>
                                         
+                                        
+                                        
                                         <p>
-                                            <h4 style="margin-left:30px;">Starting PaKo</h4>
+                                            <h4 style="margin-left:30px;">Remote observations</h4>
                                             <br>
-                                            <p  style="padding-left:30px; margin-bottom:10px;">PaKo is the observer's user interface to the New Control System at the 30-m Telescope. PaKo is the observer's user interface to the New Control System at the 30-m Telescope.</p>
+                                            <p  style="padding-left:30px; margin-bottom:10px;">vncviewer to port XX with command:</p>
                                             <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
                                                 <tr>
                                                     <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
                                                         <div align="left">
-                                                            $ gopako<br>
-                                                            $ pakodisplay<br>
-                                                            $ pako<br>
-                                                            PAKO&gt;<br>
+                                                            $ vncviewer -via remote@mrt-enter.iram.es mrt-remote.iram.es:XX<br>
                                                         </div>
                                                     </th>
                                                 </tr>
                                             </table>
+                                            <p  style="padding-left:30px; margin-top:10px; margin-bottom:10px;">This will ask for twice for a password. Enter the romote account password (a...G) for both times.</p>
+                                            <p  style="padding-left:30px; margin-top:10px; margin-bottom:10px;">If the VNC viewer software does not support the via option, use:</p>
+                                            <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
+                                                <tr>
+                                                    <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
+                                                        <div align="left">
+                                                            $ ssh -f -L 59XX:mrt-remote.iram.es:59XX remote@mrt-enter.iram.es sleep 300<br>
+                                                            $ vncviewer localhost:XX<br>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </table>
+                                            <p  style="padding-left:30px; margin-top:10px;">Port 30: usually for operation; Port 31: usually for monitoring; Port 32: usually for backup.</p>
+                                        </p>
+                                        
+                                        
+                                        
+                                        <p>
+                                            <h4 style="margin-left:30px;">Starting PaKo</h4>
+                                            <br>
+                                            <p  style="padding-left:30px; margin-bottom:10px;">PaKo is the observer's user interface to the New Control System at the 30-m Telescope. To start PaKo session for regular observations:</p>
+                                            <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
+                                                <tr>
+                                                    <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
+                                                        <div align="left">
+                                                            $ ssh -X nikas-XX@mrt-lx1 <font color="#004B97">#XX=21, 22...; password needed</font><br>
+                                                            $ cd <font color="#004B97">#make sure you are in the home directory</font><br>
+                                                            $ goNIKAnew <font color="#004B97">#??</font><br>
+                                                            $ gopako<br>
+                                                            $ pakodisplay<br>
+                                                            $ pako<br>
+                                                            PAKO&gt; @ini<br>
+                                                            PAKO&gt; set project XXX-YY <font color="#004B97">#XXX-YY=i.e., 083-21</font><br>
+                                                            PAKO&gt; set doSubmit YES<br>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </table>
+                                        </p>
+                                        
+                                        <p>
+                                            <h4 style="margin-left:30px;">Observations queue</h4>
+                                            <br>
+                                            <p  style="padding-left:30px; margin-bottom:10px;">To check what is currently in the observation's queue:</p>
+                                            <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
+                                                <tr>
+                                                    <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
+                                                        <div align="left">
+                                                            $ ssh -X mrt-lx1<br>
+                                                            $ observationQueue<br>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </table>
+                                            <p  style="padding-left:30px; margin-top:10px;">This will open a file browser with a list of all the observation's files commanded, which are waiting to be executed by the telescope's system. To remove any observation's file from the queue, right-click on the corresponding xml file and select "delete". The display will be automatically refreshed.</p>
+                                        </p>
+                                        
+                                        
+                                        <p>
+                                            <h4 style="margin-left:30px;">Starting the NIKA2 pipeline</h4>
+                                            <br>
+                                            <p  style="padding-left:30px; margin-bottom:10px;">To have the IDL pipeline continuously processing observations as they are produced:</p>
+                                            <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
+                                                <tr>
+                                                    <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
+                                                        <div align="left">
+                                                            $ ssh -X observer@nika2-a<font color="#004B97"> #password needed</font><br>
+                                                            $ IDL<br>
+                                                            IDL> nk_rta, scanID    (e.g. '20201019s132')
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </table>
+                                            <p  style="padding-left:30px; margin-top:10px;">where scanID is the corresponding identifier of the observation (as shown in the example) in the format YYYYMMDDsXXX, where YYYY is the year, MM the month, DD the day, and XXX the scan number.</p>
                                         </p>
                                         
                                         <p>
                                             <h4 style="margin-left:30px;">Starting XEphem</h4>
                                             <br>
+                                            <p  style="padding-left:30px; margin-bottom:10px;">XEphem is the software  used at the IRAM 30m telescope to keep track of the position of astronomical sources on the sky. To start XEphem</p>
                                             <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
                                                 <tr>
                                                     <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
                                                         <div align="left">
+                                                            $ slogin mrt-lx3<br>
+                                                            $ useNCS<br>
+                                                            $ azElToXephem.py &<br>
                                                             $ xephem &<br>
-                                                            $ <br>
-                                                            $
                                                         </div>
                                                     </th>
                                                 </tr>
                                             </table>
+                                            <p  style="padding-left:30px; margin-top:10px;">Then on the Xephem window, click on the tab "View" and open the "Sky View". The "cross hair" shows the coordinates the telescope is pointing at. The filled blue circles are the pointing sources. The size of the circles is proportional to the flux of the target. To load the sources catalog of your project, click on the tab "Data" and go to "Files". In the new window go again to "Files" and select the catalog of the project that you are observing.</p>
+                                        </p>
+                                        
+                                        
+                                        <p>
+                                            <h4 style="margin-left:30px;">Starting PIIC</h4>
+                                            <br>
+                                            <p  style="padding-left:30px; margin-bottom:10px;">PIIC is a quicklook monitor to process continuously the NIKA2 data.</p>
+                                            <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
+                                                <tr>
+                                                    <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
+                                                        <div align="left">
+                                                            $ssh nikas-XX@mrt-lx3<br>
+                                                            $cd ql<br>
+                                                            $piic @monitorX
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </table>
+                                            <p  style="padding-left:30px; margin-top:10px;">with X = 2pf, for pointing/focus monitoring, and X = 1, 2, 3, the instrument array to be monitored.</p>
                                         </p>
                                         
                                         
                                         <p>
                                             <h4 style="margin-left:30px;">Pointing</h4>
                                             <br>
+                                            <p  style="padding-left:30px; margin-bottom:10px;">In order to correct the pointing of the telescope in a given part of the sky choose a nearby pointing source (using e.g. XEphem).</p>
                                             <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
                                                 <tr>
                                                     <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
                                                         <div align="left">
-                                                            $<br>
-                                                            $
+                                                            $ source 0736+017 /cat *<br>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </table>
+                                            <p  style="padding-left:30px; margin-top:10px; margin-bottom:10px;">Now launch the nkpoint script:</p>
+                                            <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
+                                                <tr>
+                                                    <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
+                                                        <div align="left">
+                                                            $ PAKO> @nkpoint mode<br>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </table>
+                                            <p  style="padding-left:30px; margin-top:10px; margin-bottom:10px;">where the keyword "mode" can adopt the values b for bright sources and f for faint sources (the l option for very faint sources that require the Lissajous pattern is no longer used). To obtain the pointing corrections, use the results given by the 2pf PIIC monitor. Supplementarily, PIIC monitors 1 and 3 show the pointing corrections based on 1 mm data.</p>
+                                            <p  style="padding-left:30px; margin-top:10px; margin-bottom:10px;">[Alternatively], you can process the corresponding scan with the IDL pipeline to obtain the pointing corrections:</p>
+                                            <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
+                                                <tr>
+                                                    <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
+                                                        <div align="left">
+                                                            IDL> nk_rta, scanID<br>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </table>
+                                            <p  style="padding-left:30px; margin-top:30px; margin-bottom:10px;">Once the pointing scan is processed, enter the new pointing corrections in azimuth (PnewX) and in elevation (PnewY) shown on the PIIC monitor (or the IDL prompt of the NIKA2 pipeline):</p>
+                                            <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
+                                                <tr>
+                                                    <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
+                                                        <div align="left">
+                                                            PAKO> set pointing PnewX PnewY<br>
                                                         </div>
                                                     </th>
                                                 </tr>
@@ -121,18 +247,91 @@
                                         <p>
                                             <h4 style="margin-left:30px;">Focus</h4>
                                             <br>
+                                            <p  style="padding-left:30px; margin-bottom:10px;">The focus needs to be monitored and it needs to be corrected online. This should be done every two hours or so (~3h during very stable night-time conditions, ~1h or less near sunrise and sunset) in the Z direction. To check the quality of the focus run:</p>
                                             <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
                                                 <tr>
                                                     <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
                                                         <div align="left">
-                                                            $<br>
-                                                            $
+                                                            PAKO> @focusOTF-Z fz<br>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </table>
+                                            <p  style="padding-left:30px; margin-top:10px; margin-bottom:10px;">The fz value can be obtained from the PIIC monitor used in the last step 'pointing'.</p>
+                                            <p  style="padding-left:30px; margin-top:10px; margin-bottom:10px;">This script will carry out 5 foci measurements in Z direction within a 1.6 mm range, centered at the fz value. In order to obtain the focus corrections, use the results given by the 2pf PIIC monitor. Supplementarily, PIIC monitors 1 and 3 also show focus corrections from 1 mm data.</p>
+                                            <p  style="padding-left:30px; margin-top:10px; margin-bottom:10px;">[Alternatively], the corresponding scan number can be processed by the IDL pipeline to obtain the focus corrections:</p>
+                                            <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
+                                                <tr>
+                                                    <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
+                                                        <div align="left">
+                                                            IDL> nk_rta, scanID1    (for measurement 1)<br>
+                                                            IDL> nk_rta, scanID2    (for measurement 2)<br>
+                                                            IDL> nk_rta, scanID3    (for measurement 3)<br>
+                                                            IDL> nk_rta, scanID4    (for measurement 4)<br>
+                                                            IDL> nk_rta, scanID5    (for measurement 5)<br>
+                                                            IDL> nk_focus_otf,'YYYYMMDDs'+strtrim(SCANNUMBER+indgen(5),2)<br>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </table>
+                                            <p  style="padding-left:30px; margin-top:10px;">All measured foci need to be processed together by the "nk_focus_otf" routine of the IDL pipeline to perform the best focus fit in terms of the measured Flux, beam FWHM, and beam ellipticity of the KID's. The ScanID is in the format YYYYMMDDsSCANNUMBER. Once the "nk_focus_otf" routine has finished, check the focus correction values displayed in the IDL prompt under "Fluxes" for the three arrays (A1, A2, & A3) and calculate the average value that will be used to correct the focus. </p>
+                                            <p  style="padding-left:30px; margin-top:10px; margin-bottom:10px;">Once the focus correction calculation finished, enter the new focus value (Fnew) as follows (Fnew comes from the PIIC monitor or the IDL prompt of the NIKA2 pipeline): </p>
+                                            <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
+                                                <tr>
+                                                    <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
+                                                        <div align="left">
+                                                            PAKO> set focus Fnew<br>
                                                         </div>
                                                     </th>
                                                 </tr>
                                             </table>
                                         </p>
                                         
+                                        
+                                        <p>
+                                            <h4 style="margin-left:30px;">Project observations</h4>
+                                            <br>
+                                            <p  style="padding-left:30px; margin-bottom:10px;">For pool observations:</p>
+                                            <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
+                                                <tr>
+                                                    <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
+                                                        <div align="left">
+                                                            PAKO&gt; set project nikas-21<font color="#004B97"> #Use pool account to do initial pointing+focus</font><br>
+                                                            PAKO&gt; [do initial pointing]<br>
+                                                            PAKO&gt; [do initial focus]<br>
+                                                            PAKO&gt; @ ~/083-21/setup_083-21.pako<font color="#004B97"> #set the project for pooled observations</font><br>
+                                                            PAKO&gt; [do pointing1]<br>
+                                                            PAKO&gt; @ ~/083-21/observe_J0703+5151<br>
+                                                            PAKO&gt; [do pointing1]<br>
+                                                            PAKO&gt; set project nikas-21<font color="#004B97"> #Use pool account to do initial pointing+focus</font><br>
+                                                            PAKO&gt; [do initial pointing]<br>
+                                                            PAKO&gt; [do initial focus]<br>
+                                                            PAKO&gt; @ ~/083-21/setup_083-21.pako<font color="#004B97"> #set the project for pooled observations</font><br>
+                                                            PAKO&gt; [do pointing2]<br>
+                                                            PAKO&gt; @ ~/083-21/observe_J0730+4811<br>
+                                                            PAKO&gt; [do pointing2]<br>
+                                                            PAKO&gt; ...<br>
+                                                            PAKO&gt; ...<br>
+                                                            PAKO&gt; ...<br>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </table>
+                                            <p  style="padding-left:30px; margin-top:10px;"></p>
+                                        </p>
+                                        
+                                        
+                                        
+                                        <p>
+                                            <h4 style="margin-left:30px;">Add comments</h4>
+                                            <br>
+                                            <p  style="padding-left:30px; margin-bottom:10px;">Log in <a href="https://tapas.iram.es/tapas" target="_blank">Telescope Archive for Public Access System</a>, and click "My Projects", then click "Logsheet". Then add comments like:</p>
+                                            <p  style="padding-left:54px; text-indent: -24px; margin-top:10px; margin-bottom:0px;">&#9744; For initial pointing in pool account: set pointing X X</p>
+                                            <p  style="padding-left:54px; text-indent: -24px; margin-top:10px; margin-bottom:0px;">&#9744; For initial focus in pool account: focus sequence 1/5; 2/5; 3/5; 4/5; 5/5 set focus X</p>
+                                            <p  style="padding-left:54px; text-indent: -24px; margin-top:10px; margin-bottom:0px;">&#9744; For target-before-pointing observations: set pointing X X. Focus correction was obtained right before the beginning of this repetition on XXXX+/-XXX (scans X to X[5-scan], , nikas-21 account); best value is X. Pretty stable. Beam sizes as expected.</p>
+                                            <p  style="padding-left:54px; text-indent: -24px; margin-top:10px; margin-bottom:0px;">&#9744; For target observations: @ ~/083-21/observe_J0839+0113 -> 1/9; @ ~/083-21/observe_J0839+0113 -> 2/9; @ ~/083-21/observe_J0839+0113 -> 3/9; ...</p>
+                                            <p  style="padding-left:54px; text-indent: -24px; margin-top:10px; margin-bottom:0px;">&#9744; For target-after-pointing observations: set pointing X X</p>
+                                        </p>
                                         
                                         
                                         
