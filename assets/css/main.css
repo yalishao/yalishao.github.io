@@ -1730,8 +1730,8 @@ input, select, textarea {
 			border-bottom: solid 1px #e2e6e8;
 		}
         #content .hangingindent {
-            padding-left: 17pt ;
-            text-indent: -17pt ;
+            padding-left: 23px ;
+            text-indent: -23px ;
         }
         #content .hangingindent2 {
             padding-left: 26px ;
