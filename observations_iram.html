@@ -109,10 +109,12 @@
                                                         <div align="left">
                                                             $ ssh -X nikas-XX@mrt-lx1 <font color="#004B97">#XX=21, 22...; password needed</font><br>
                                                             $ cd <font color="#004B97">#make sure you are in the home directory</font><br>
-                                                            $ goNIKAnew <font color="#004B97">#??</font><br>
+                                                            $ goNIKAnew <br>
+                                                            (or <br>
                                                             $ gopako<br>
                                                             $ pakodisplay<br>
                                                             $ pako<br>
+                                                            ) <br>
                                                             PAKO&gt; @ini<br>
                                                             PAKO&gt; set project XXX-YY <font color="#004B97">#XXX-YY=i.e., 083-21</font><br>
                                                             PAKO&gt; set doSubmit YES<br>
@@ -174,14 +176,14 @@
                                                     </th>
                                                 </tr>
                                             </table>
-                                            <p  style="padding-left:30px; margin-top:10px;">Then on the Xephem window, click on the tab "View" and open the "Sky View". The "cross hair" shows the coordinates the telescope is pointing at. The filled blue circles are the pointing sources. The size of the circles is proportional to the flux of the target. To load the sources catalog of your project, click on the tab "Data" and go to "Files". In the new window go again to "Files" and select the catalog of the project that you are observing.</p>
+                                            <p  style="padding-left:30px; margin-top:10px;">Then on the Xephem window, click on the tab "View" and open the "Sky View". The "cross hair" shows the coordinates the telescope is pointing at. The filled blue circles are the pointing sources. The size of the circles is proportional to the flux of the target. To load the sources catalog of your project, click on the tab "Data" and go to "Files". In the new window go again to "Files" and select the catalog of the project that you are observing. Right click on a target, and "create trails" can show the path of the project</p>
                                         </p>
                                         
                                         
                                         <p>
                                             <h4 style="margin-left:30px;">Starting PIIC</h4>
                                             <br>
-                                            <p  style="padding-left:30px; margin-bottom:10px;">PIIC is a quicklook monitor to process continuously the NIKA2 data.</p>
+                                            <p  style="padding-left:30px; margin-bottom:10px;">PIIC is a quicklook monitor to process continuously the NIKA2 data (autometically).</p>
                                             <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
                                                 <tr>
                                                     <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
@@ -193,7 +195,7 @@
                                                     </th>
                                                 </tr>
                                             </table>
-                                            <p  style="padding-left:30px; margin-top:10px;">with X = 2pf, for pointing/focus monitoring, and X = 1, 2, 3, the instrument array to be monitored.</p>
+                                            <p  style="padding-left:30px; margin-top:10px;">with X = 2pf, for pointing/focus monitoring at 2mm (in window-4 always??; it is much quick), and X = 1 (in window-6), 2m (for your project at 2mm; in window-5), 3 (in window-7) (w6 and w7 are for the pointing+focus+your project at 1mm and 3mm, so they are very slow), the instrument array to be monitored.</p>
                                         </p>
                                         
                                         
@@ -205,12 +207,12 @@
                                                 <tr>
                                                     <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
                                                         <div align="left">
-                                                            $ source 0736+017 /cat *<br>
+                                                            $ PAKO> source 0736+017 /cat *<br>
                                                         </div>
                                                     </th>
                                                 </tr>
                                             </table>
-                                            <p  style="padding-left:30px; margin-top:10px; margin-bottom:10px;">Now launch the nkpoint script:</p>
+                                            <p  style="padding-left:30px; margin-top:10px; margin-bottom:10px;">After this, check the green window if the target is there. Now launch the nkpoint script:</p>
                                             <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
                                                 <tr>
                                                     <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
@@ -231,7 +233,7 @@
                                                     </th>
                                                 </tr>
                                             </table>
-                                            <p  style="padding-left:30px; margin-top:30px; margin-bottom:10px;">Once the pointing scan is processed, enter the new pointing corrections in azimuth (PnewX) and in elevation (PnewY) shown on the PIIC monitor (or the IDL prompt of the NIKA2 pipeline):</p>
+                                            <p  style="padding-left:30px; margin-top:30px; margin-bottom:10px;">Once the pointing scan is processed, enter the new pointing corrections in azimuth (PnewX) and in elevation (PnewY) shown on the PIIC monitor in window-4 (or the IDL prompt of the NIKA2 pipeline), after which check the green window if the values set correctly:</p>
                                             <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
                                                 <tr>
                                                     <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
@@ -257,7 +259,7 @@
                                                     </th>
                                                 </tr>
                                             </table>
-                                            <p  style="padding-left:30px; margin-top:10px; margin-bottom:10px;">The fz value can be obtained from the PIIC monitor used in the last step 'pointing'.</p>
+                                            <p  style="padding-left:30px; margin-top:10px; margin-bottom:10px;">The fz value can be obtained from the green window.</p>
                                             <p  style="padding-left:30px; margin-top:10px; margin-bottom:10px;">This script will carry out 5 foci measurements in Z direction within a 1.6 mm range, centered at the fz value. In order to obtain the focus corrections, use the results given by the 2pf PIIC monitor. Supplementarily, PIIC monitors 1 and 3 also show focus corrections from 1 mm data.</p>
                                             <p  style="padding-left:30px; margin-top:10px; margin-bottom:10px;">[Alternatively], the corresponding scan number can be processed by the IDL pipeline to obtain the focus corrections:</p>
                                             <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
@@ -275,7 +277,7 @@
                                                 </tr>
                                             </table>
                                             <p  style="padding-left:30px; margin-top:10px;">All measured foci need to be processed together by the "nk_focus_otf" routine of the IDL pipeline to perform the best focus fit in terms of the measured Flux, beam FWHM, and beam ellipticity of the KID's. The ScanID is in the format YYYYMMDDsSCANNUMBER. Once the "nk_focus_otf" routine has finished, check the focus correction values displayed in the IDL prompt under "Fluxes" for the three arrays (A1, A2, & A3) and calculate the average value that will be used to correct the focus. </p>
-                                            <p  style="padding-left:30px; margin-top:10px; margin-bottom:10px;">Once the focus correction calculation finished, enter the new focus value (Fnew) as follows (Fnew comes from the PIIC monitor or the IDL prompt of the NIKA2 pipeline): </p>
+                                            <p  style="padding-left:30px; margin-top:10px; margin-bottom:10px;">Once the focus correction calculation finished, enter the new focus value (Fnew) as follows (Fnew comes from the PIIC monitor in the right panel of window-4 or the IDL prompt of the NIKA2 pipeline), after which check the green window if the values set correctly: </p>
                                             <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
                                                 <tr>
                                                     <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
@@ -321,12 +323,51 @@
                                         </p>
                                         
                                         
+                                        <p>
+                                            <h4 style="margin-left:30px;">Other calibations</h4>
+                                            <br>
+                                            <p  style="padding-left:30px; margin-bottom:10px;">calib_1scan -</p>
+                                            <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
+                                                <tr>
+                                                    <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
+                                                        <div align="left">
+                                                            PAKO> @ calib_1scan<br>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </table>
+                                            
+                                            <p  style="padding-left:30px; margin-bottom:10px; margin-top:10px;">Skydips - This kind of scan is to be done two to four times a day. It takes ~6 mins.</p>
+                                            <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
+                                                <tr>
+                                                    <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
+                                                        <div align="left">
+                                                            PAKO> @ skydip<br>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </table>
+                                            
+                                            <p  style="padding-left:30px; margin-bottom:10px; margin-top:10px;">Beam Map - Beam maps are designed to ensure the source is moved over all the detectors of the array, in order to characterize and calibrate them (field of view geometry, flat field, stability, etc). The aim is to calculate the actual pixel offsets in the focal plane. This kind of scan is to be done once a day or every two days. It takes ~25 mins. To obtain a beam map go to a primary calibrator and launch the beammap1scan99sub.pako script in the normal PaKo session:</p>
+                                            <table style="table-layout: fixed; word-wrap:break-word; margin-left:30px; margin-right:20px;" width="95%">
+                                                <tr>
+                                                    <th style="width: 100%; font-size: 12pt" bgcolor="#F8F9F9">
+                                                        <div align="left">
+                                                            PAKO> @ beammap1scan99sub<br>
+                                                        </div>
+                                                    </th>
+                                                </tr>
+                                            </table>
+
+                                        </p>
+                                        
+                                        
                                         
                                         <p>
                                             <h4 style="margin-left:30px;">Add comments</h4>
                                             <br>
                                             <p  style="padding-left:30px; margin-bottom:10px;">Log in <a href="https://tapas.iram.es/tapas" target="_blank">Telescope Archive for Public Access System</a>, and click "My Projects", then click "Logsheet". Then add comments like:</p>
-                                            <p  style="padding-left:54px; text-indent: -24px; margin-top:10px; margin-bottom:0px;">&#9744; For initial pointing in pool account: set pointing X X</p>
+                                            <p  style="padding-left:54px; text-indent: -24px; margin-top:10px; margin-bottom:0px;">&#9744; For initial pointing in pool account: set pointing X X; baseline fluctuations at X Jy/beam (rms) @ 2mm and X Jy/beam (rms) @ 1mm; beam size in FWHM of X" x X" @ 2mm and  X" x X" @ 1mm and</p>
                                             <p  style="padding-left:54px; text-indent: -24px; margin-top:10px; margin-bottom:0px;">&#9744; For initial focus in pool account: focus sequence 1/5; 2/5; 3/5; 4/5; 5/5 set focus X</p>
                                             <p  style="padding-left:54px; text-indent: -24px; margin-top:10px; margin-bottom:0px;">&#9744; For target-before-pointing observations: set pointing X X. Focus correction was obtained right before the beginning of this repetition on XXXX+/-XXX (scans X to X[5-scan], , nikas-21 account); best value is X. Pretty stable. Beam sizes as expected.</p>
                                             <p  style="padding-left:54px; text-indent: -24px; margin-top:10px; margin-bottom:0px;">&#9744; For target observations: @ ~/083-21/observe_J0839+0113 -> 1/9; @ ~/083-21/observe_J0839+0113 -> 2/9; @ ~/083-21/observe_J0839+0113 -> 3/9; ...</p>
@@ -335,6 +376,23 @@
                                         
                                         
                                         
+                                        <p>
+                                            <h4 style="margin-left:30px;">Other tips</h4>
+                                            <br>
+                                            <p  style="padding-left:54px; text-indent: -24px; margin-top:10px; margin-bottom:0px;">&#9744; mrt-lx1 is for PAKO; mrt-lx3 is for XEphem and PIIC; mrt-lx2 or lx3 for IDL. </p>
+                                            <p  style="padding-left:54px; text-indent: -24px; margin-top:10px; margin-bottom:0px;">&#9744; To start PAKO, XEphem, PIIC anf IDL, one need be in the home directory.</p>
+                                            <p  style="padding-left:54px; text-indent: -24px; margin-top:10px; margin-bottom:0px;">&#9744; The IDL pipeline is earler than the PIIC pipeline. People who used IDL pipeline may prefer to use it. The PIIC pipeline is automatic. The IDL pipeline can do polarazition but PIIC pipeline can not.</p>
+                                        </p>
+                                        
+                                        
+                                        <p>
+                                            <h4 style="margin-left:30px;">Reference</h4>
+                                            <br>
+                                            <p  style="padding-left:54px; text-indent: -24px; margin-top:10px; margin-bottom:0px;">&#9744; <a href="https://publicwiki.iram.es/Continuum/ObservingSession" target="_blank">Observing with NIKA2</a></p>
+                                        </p>
+                                        
+                                    
+                                    
                                     
 
                                     </section>
